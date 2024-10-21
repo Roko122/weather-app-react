@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
-import { Navbar, NavDropdown, Nav, Container, Row, Col } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import { NavLink, useLocation } from 'react-router-dom';
 import './CustomNavbar.css'
 
 function CustomNavbar() {
 
     const [expanded, setExpanded] = useState(false);
-    const [currentPage, setCurrentPage] = useState("Current Weather")
+    const [currentPage, setCurrentPage] = useState("React Weather")
+    const location = useLocation()
+
+    useEffect(() => {
+        switch (location.pathname) {
+            case "/":
+                setCurrentPage("Current Weather")
+                break
+            case "/forecast":
+                setCurrentPage("5-Day Forecast")
+                break
+            case "/rainmap":
+                setCurrentPage("Precipitation Map")
+                break
+            default:
+                setCurrentPage("React Weather")
+        }
+    }, [])
 
     const handleClick = (page) => {
         setExpanded(false)
@@ -22,7 +39,7 @@ function CustomNavbar() {
             </Row>
             <Container className="nav-container">
                 <Navbar expand="md" expanded={expanded} onToggle={() => setExpanded(!expanded)}>
-                    <Navbar.Brand className="d-block d-md-none">{currentPage}</Navbar.Brand>
+                    <Navbar.Brand className="d-md-none">{currentPage}</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav variant="underline" defaultActiveKey="./CurrentWeather.jsx">
