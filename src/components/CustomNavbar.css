@@ -42,7 +42,8 @@
     align-items: center;
     color: #0f1429c7;
     font-weight: bold;
-    width: 150px;
+    width: 180px;
+    font-size: 1.2em;
 }
 
 .nav-link.active {
