@@ -1,14 +1,22 @@
-import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import CustomNavbar from './components/CustomNavbar'
+import CurrentWeather from './components/CurrentWeather'
+import Forecast from './components/Forecast'
+import RainMap from './components/RainMap'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>React Weather App</h1>
-    </>
+    <Router>
+      <CustomNavbar />
+      <Routes>
+        <Route path="/" element={<CurrentWeather />} />
+        <Route path="/forecast" element={<Forecast />} />
+        <Route path="/rainmap" element={<RainMap />} />
+      </Routes>
+    </Router>
   )
 }
 
