@@ -14,4 +14,4 @@ Final project for Web Programming I course. Allows users to search weather infor
 - CSS
 - JavaScript
 - Openweathermap API
-- MaterialUI
+- React Bootstrap
