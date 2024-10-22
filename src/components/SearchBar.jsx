@@ -13,6 +13,7 @@ function SearchBar({ setLocation }) {
     const handleInput = (e) => {
         e.preventDefault()
         setLocation(userInput)
+        setUserInput("")
     }
 
     const userLocation = () => {
@@ -36,7 +37,9 @@ function SearchBar({ setLocation }) {
                 <i className="bi bi-geo-alt-fill"></i>
             </Button>
             <InputGroup>
-                <Form.Control onChange={handleUserInput}
+                <Form.Control
+                    value={userInput}
+                    onChange={handleUserInput}
                     placeholder="Enter a location"
                     aria-label="Enter a location"
                 />

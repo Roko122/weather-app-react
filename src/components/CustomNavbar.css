@@ -8,7 +8,7 @@
     align-items: center;
     border: 3px solid #1e274e;
     border-radius: 30px;
-    background-color: #99CCFF;
+    background: linear-gradient(to right bottom, #6fbdf0, #337ab7);
     padding: 8px 0 8px 0;
     max-width: 700px;
 }
@@ -43,16 +43,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #0f1429c7;
+    color: #333333;
     font-weight: bold;
     width: 180px;
     font-size: 1.2em;
 }
 
 .nav-link.active {
-    color: #1e3b8ae0 !important;
+    color: #212052 !important;
 }
 
 .nav-link:hover {
-    color: #1E3A8A;
+    color: #212052be;
 }
