@@ -18,4 +18,20 @@ const getCurrentWeather = (location) => {
     })
 }
 
-export default { getCurrentWeather }
+const getLocation = (lat, lon) => {
+    return axios.get(`http://api.openweathermap.org/geo/1.0/reverse?`, {
+        params: {
+            lat: lat,
+            lon: lon,
+            limit: 1,
+            appid: api_key,
+        }
+    })
+    .then(response => response.data)
+    .catch(error => {
+        console.error("Error fetching weather data:", error)
+        throw error
+    })
+}
+
+export default { getCurrentWeather, getLocation }

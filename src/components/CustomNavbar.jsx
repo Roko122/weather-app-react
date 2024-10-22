@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import './CustomNavbar.css'
 import SearchBar from './SearchBar';
 
-function CustomNavbar() {
+function CustomNavbar({ setLocation }) {
 
     const [expanded, setExpanded] = useState(false);
     const [currentPage, setCurrentPage] = useState("React Weather")
@@ -40,7 +40,7 @@ function CustomNavbar() {
                     </Col>
                 </Row>
 
-                <SearchBar />
+                <SearchBar setLocation={setLocation} />
 
             </Container>
 
