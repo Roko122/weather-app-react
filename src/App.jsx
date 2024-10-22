@@ -7,14 +7,17 @@ import CustomNavbar from './components/CustomNavbar'
 import CurrentWeather from './components/CurrentWeather'
 import Forecast from './components/Forecast'
 import RainMap from './components/RainMap'
+import { useState } from 'react';
 
 function App() {
+  const [location, setLocation] = useState("Joensuu, Finland")
+
   return (
     <>
       <Router>
         <CustomNavbar />
         <Routes>
-          <Route path="/" element={<CurrentWeather />} />
+          <Route path="/" element={<CurrentWeather location={location} />} />
           <Route path="/forecast" element={<Forecast />} />
           <Route path="/rainmap" element={<RainMap />} />
         </Routes>

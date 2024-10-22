@@ -34,7 +34,7 @@ function CustomNavbar() {
     return (
         <Container>
             <Container className="title-searchbar-container">
-                <Row className='my-4'>
+                <Row className='my-2'>
                     <Col className='text-center'>
                         <h1>React Weather</h1>
                     </Col>
