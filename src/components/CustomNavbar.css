@@ -1,14 +1,17 @@
+.title-searchbar-container {
+    max-width: 700px;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border: 3px solid #1e274e;
-    border-radius: 50px;
-    background-color: #89bff1;
-    padding: 8px;
+    border-radius: 30px;
+    background-color: #99CCFF;
+    padding: 8px 0 8px 0;
     max-width: 700px;
 }
-
 
 @media (max-width: 768px) {
     .navbar-nav {
@@ -31,7 +34,7 @@
     }
 
     .navbar-brand {
-        margin-left: 50px;
+        margin-left: 30px;
         font-weight: bold;
     }
 }
@@ -47,9 +50,9 @@
 }
 
 .nav-link.active {
-    color: rgb(0, 55, 173) !important;
+    color: #1e3b8ae0 !important;
 }
 
 .nav-link:hover {
-    color: #0f1429;
+    color: #1E3A8A;
 }

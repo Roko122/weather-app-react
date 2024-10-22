@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -9,14 +10,17 @@ import RainMap from './components/RainMap'
 
 function App() {
   return (
-    <Router>
-      <CustomNavbar />
-      <Routes>
-        <Route path="/" element={<CurrentWeather />} />
-        <Route path="/forecast" element={<Forecast />} />
-        <Route path="/rainmap" element={<RainMap />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <CustomNavbar />
+        <Routes>
+          <Route path="/" element={<CurrentWeather />} />
+          <Route path="/forecast" element={<Forecast />} />
+          <Route path="/rainmap" element={<RainMap />} />
+        </Routes>
+      </Router>
+    </>
+
   )
 }
 

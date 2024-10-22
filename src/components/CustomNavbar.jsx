@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import { NavLink, useLocation } from 'react-router-dom';
 import './CustomNavbar.css'
+import SearchBar from './SearchBar';
 
 function CustomNavbar() {
 
@@ -32,11 +33,17 @@ function CustomNavbar() {
 
     return (
         <Container>
-            <Row className='my-4'>
-                <Col className='text-center'>
-                    <h1>React Weather</h1>
-                </Col>
-            </Row>
+            <Container className="title-searchbar-container">
+                <Row className='my-4'>
+                    <Col className='text-center'>
+                        <h1>React Weather</h1>
+                    </Col>
+                </Row>
+
+                <SearchBar />
+
+            </Container>
+
             <Container className="nav-container">
                 <Navbar expand="md" expanded={expanded} onToggle={() => setExpanded(!expanded)}>
                     <Navbar.Brand className="d-md-none">{currentPage}</Navbar.Brand>
