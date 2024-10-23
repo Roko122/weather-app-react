@@ -18,13 +18,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    width: 40px;
-    height: 100%;
+    width: 50px;
+    height: 45px;
 }
 
 .form-control {
     border-radius: 50px;
-    height: 40px;
+    height: 45px;
 }
 
 .search-button {
