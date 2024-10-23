@@ -8,3 +8,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+.leaflet-container {
+  font-family: 'Fira Sans', sans-serif;
+  width: 103%;
+  height: 65vh;
+  border-radius: 30px;
+}

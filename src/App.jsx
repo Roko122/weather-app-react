@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<CurrentWeather location={location} />} />
             <Route path="/forecast" element={<Forecast location={location} />} />
-            <Route path="/rainmap" element={<RainMap />} />
+            <Route path="/rainmap" element={<RainMap location={location} />} />
           </Routes>
         </Container>
       </Router>

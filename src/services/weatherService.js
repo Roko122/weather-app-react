@@ -44,9 +44,24 @@ const getLocation = (lat, lon) => {
     })
     .then(response => response.data)
     .catch(error => {
-        console.error("Error fetching weather data:", error)
+        console.error("Error fetching location data:", error)
         throw error
     })
 }
 
-export default { getCurrentWeather, getForecast, getLocation }
+const getCoordinates = (location) => {
+    return axios.get(`http://api.openweathermap.org/geo/1.0/direct?`, {
+        params: {
+            q: location,
+            appid: api_key,
+            limit: 1
+        }
+    })
+    .then(response => response.data)
+    .catch(error => {
+        console.error("Error fetching location data:", error)
+        throw error
+    })
+}
+
+export default { getCurrentWeather, getForecast, getLocation, getCoordinates }

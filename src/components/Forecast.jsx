@@ -1,13 +1,13 @@
 import './Forecast.css'
 import { useEffect, useState } from "react"
-import { Spinner, Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import weatherService from "../services/weatherService"
 import LoadingContainer from "./LoadingContainer"
 import ErrorContainer from './ErrorContainer'
 
 function Forecast({ location }) {
     const [forecastData, setForecastData] = useState(null)
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
     useEffect(() => {
