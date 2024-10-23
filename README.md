@@ -4,8 +4,11 @@ Final project for Web Programming I course. Allows users to search weather infor
 ## Features
 - Users can 
     - view current weather
+    ![Current weather] (.\assets\images\currentweather.png)
     - view 5-day forecast
+    ![5-day forecast] (.\assets\images\5dayforecast.png)
     - view a precipitation map
+    ![Precipitation map] (.\assets\images\precipitationmap.png)
 
 ## Techonologies and tools used
 - React.js
