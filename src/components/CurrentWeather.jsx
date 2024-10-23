@@ -149,7 +149,7 @@ function CurrentWeather({ location }) {
                 <Container className="currentweather-container mt-4">
                     <p className="location-name mt-4 mb-3">{weatherData.name}, {weatherData.sys.country}</p>
                     <p className="date">
-                        {`${getDayOfWeek()} ${currentDate.getDate()}${ordinalSuffix(13)} of ${monthOfYear()} ${currentDate.getFullYear()}`}
+                        {`${getDayOfWeek()} ${currentDate.getDate()}${ordinalSuffix(currentDate.getDay())} of ${monthOfYear()} ${currentDate.getFullYear()}`}
                     </p>
                     <p className="location-name">{`${currentDate.getHours()}:00`}</p>
 
