@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #333333;
+    color: #333333e3;
     font-weight: bold;
     width: 180px;
     font-size: 1.2em;
@@ -53,5 +53,5 @@
 }
 
 .nav-link:hover {
-    color: #212052be;
+    color: #333333;
 }
