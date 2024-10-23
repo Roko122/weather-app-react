@@ -20,7 +20,7 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<CurrentWeather location={location} />} />
-            <Route path="/forecast" element={<Forecast />} />
+            <Route path="/forecast" element={<Forecast location={location} />} />
             <Route path="/rainmap" element={<RainMap />} />
           </Routes>
         </Container>

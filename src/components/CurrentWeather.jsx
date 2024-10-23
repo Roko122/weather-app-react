@@ -17,7 +17,6 @@ function CurrentWeather({ location }) {
             .then(data => {
                 setWeatherData(data)
                 setError(null)
-                console.log(data)
             })
             .catch(error => {
                 setError(error)

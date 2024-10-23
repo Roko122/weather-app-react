@@ -18,6 +18,21 @@ const getCurrentWeather = (location) => {
     })
 }
 
+const getForecast = (location) => {
+    return axios.get(`${baseURL}/forecast`, {
+        params: {
+            q: location,
+            appid: api_key,
+            units: "metric"
+        }
+    })
+    .then(response => response.data)
+    .catch(error => {
+        console.error("Error fetching forecast data:", error)
+        throw error
+    })
+}
+
 const getLocation = (lat, lon) => {
     return axios.get(`http://api.openweathermap.org/geo/1.0/reverse?`, {
         params: {
@@ -34,4 +49,4 @@ const getLocation = (lat, lon) => {
     })
 }
 
-export default { getCurrentWeather, getLocation }
+export default { getCurrentWeather, getForecast, getLocation }
