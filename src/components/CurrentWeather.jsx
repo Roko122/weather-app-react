@@ -1,9 +1,9 @@
-import { Spinner, Col, Container, Row } from "react-bootstrap"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun } from '@fortawesome/free-solid-svg-icons'
 import './CurrentWeather.css'
-import weatherService from "../services/weatherService"
 import { useEffect, useState } from "react"
+import { Col, Container, Row } from "react-bootstrap"
+import weatherService from "../services/weatherService"
+import LoadingContainer from "./LoadingContainer"
+import ErrorContainer from './ErrorContainer'
 
 function CurrentWeather({ location }) {
     const currentDate = new Date();
@@ -58,29 +58,29 @@ function CurrentWeather({ location }) {
 
     const monthOfYear = () => {
         switch (currentDate.getMonth()) {
-            case 1:
+            case 0:
                 return "January"
-            case 2:
+            case 1:
                 return "February"
-            case 3:
+            case 2:
                 return "March"
-            case 4:
+            case 3:
                 return "April"
-            case 5:
+            case 4:
                 return "May"
-            case 6:
+            case 5:
                 return "June"
-            case 7:
+            case 6:
                 return "July"
-            case 8:
+            case 7:
                 return "August"
-            case 9:
+            case 8:
                 return "September"
-            case 10:
+            case 9:
                 return "October"
-            case 11:
+            case 10:
                 return "November"
-            case 12:
+            case 11:
                 return "December"
         }
     }
@@ -141,8 +141,6 @@ function CurrentWeather({ location }) {
         }
     }
 
-
-
     return (
         <>
             {weatherData && !loading && !error && (
@@ -199,25 +197,11 @@ function CurrentWeather({ location }) {
             )}
 
             {loading && (
-                <Container className="loading-container my-3">
-                    <Spinner animation="border" variant="primary" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                </Container>
+                <LoadingContainer />
             )}
 
             {error && (
-                <Container className="loading-container my-3">
-                    <div>
-                        <div className="error-container">
-                            <FontAwesomeIcon icon={faSun} spin size="2x" style={{ color: "#FFD43B", }} />
-                            <strong>404 Not Found</strong>
-                            <FontAwesomeIcon icon={faSun} spin size="2x" style={{ color: "#FFD43B", }} />
-                        </div>
-                        <p className="date">Oh no! Couldn't find weather data from given location.<br></br>
-                            Please check spelling and try again.</p>
-                    </div>
-                </Container>
+                <ErrorContainer />
             )}
         </>
     )

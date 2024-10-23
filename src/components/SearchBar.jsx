@@ -38,6 +38,7 @@ function SearchBar({ setLocation }) {
             </Button>
             <InputGroup>
                 <Form.Control
+                    name="location"
                     value={userInput}
                     onChange={handleUserInput}
                     placeholder="Enter a location"
