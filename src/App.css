@@ -11,7 +11,8 @@ body {
 
 .leaflet-container {
   font-family: 'Fira Sans', sans-serif;
-  width: 103%;
-  height: 65vh;
-  border-radius: 30px;
+  width: 104%;
+  border: 2px solid black;
+  height: 55vh;
+  border-radius: 15px;
 }

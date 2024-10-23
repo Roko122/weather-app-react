@@ -16,7 +16,7 @@ function WeatherMap({ lat, lon }) {
         >
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors ll'
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
             <TileLayer
                 url={`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${api_key}`}
