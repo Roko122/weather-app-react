@@ -35,7 +35,10 @@ function Rainmap({ location }) {
             {mapData && !loading && !error && (
                 <Container className="rainmap-container mt-3">
                     <p className="location-name mt-4 mb-3">{mapData.location}</p>
-                    <p className="date mb-3">Precipitation</p>
+                    <p className="date rain mb-3">
+                        <i className="bi bi-cloud-rain weather-info-icon"></i>
+                        Precipitation
+                    </p>
                     <WeatherMap lat={mapData.lat} lon={mapData.lon} />
                 </Container>
             )}
