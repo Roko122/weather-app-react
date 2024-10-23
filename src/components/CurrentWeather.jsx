@@ -2,8 +2,8 @@ import { Spinner, Col, Container, Row } from "react-bootstrap"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import './CurrentWeather.css'
-import weatherService from "../services/weatherService";
-import { useEffect, useState } from "react";
+import weatherService from "../services/weatherService"
+import { useEffect, useState } from "react"
 
 function CurrentWeather({ location }) {
     const currentDate = new Date();
@@ -146,7 +146,7 @@ function CurrentWeather({ location }) {
     return (
         <>
             {weatherData && !loading && !error && (
-                <Container className="currentweather-container mt-4">
+                <Container className="currentweather-container mt-3">
                     <p className="location-name mt-4 mb-3">{weatherData.name}, {weatherData.sys.country}</p>
                     <p className="date">
                         {`${getDayOfWeek()} ${currentDate.getDate()}${ordinalSuffix(currentDate.getDay())} of ${monthOfYear()} ${currentDate.getFullYear()}`}
@@ -199,7 +199,7 @@ function CurrentWeather({ location }) {
             )}
 
             {loading && (
-                <Container className="loading-container my-4">
+                <Container className="loading-container my-3">
                     <Spinner animation="border" variant="primary" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
@@ -207,7 +207,7 @@ function CurrentWeather({ location }) {
             )}
 
             {error && (
-                <Container className="loading-container my-4">
+                <Container className="loading-container my-3">
                     <div>
                         <div className="error-container">
                             <FontAwesomeIcon icon={faSun} spin size="2x" style={{ color: "#FFD43B", }} />
