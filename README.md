@@ -1,5 +1,5 @@
 # React Weather App
-Final project for Web Programming I course. Allows users to search weather information from chosen location.
+Final project for Web Programming I course (fall 2024). Allows users to search weather information from chosen location.
 
 ## Features
 - Users can 
